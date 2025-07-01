@@ -111,17 +111,25 @@
         color: var(--white-color);
 
         @include media('mobile') {
-            right: -64px;
+            right: -32px;
         }
 
         p {
             margin: 0;
             font: 400 24px / 100% var(--ff-secondary);
             text-transform: uppercase;
+
+            @include media('mobile') {
+                font-size: 14px;
+            }
         }
 
         svg {
             transform: rotate(-90deg);
+            @include media('mobile') {
+                width: 20px;
+                height: 20px;
+            }
         }
     }
 

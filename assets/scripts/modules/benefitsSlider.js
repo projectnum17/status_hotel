@@ -14,6 +14,16 @@ const benefitsSlider = () => {
             prevEl: '.benefits__gallery .btn--prev',
             nextEl: '.benefits__gallery .btn--next',
         },
+        breakpoints: {
+            320: {
+                slidesPerView: 1,
+                spaceBetween: 20,
+                centeredSlides: false,
+            },
+            768: {
+                slidesPerView: 3,
+            }
+        }
     });
 };
 

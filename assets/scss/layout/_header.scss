@@ -26,6 +26,20 @@
         }
     }
 
+    @include media('mobile') {
+        padding-block: 8px;
+    }
+
+    &__logo {
+        @include media('mobile') {
+            max-width: 50px;
+
+            img {
+                width: 100%;
+            }
+        }
+    }
+
     .container {
         display: flex;
         align-items: center;
