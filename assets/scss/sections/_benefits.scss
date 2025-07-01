@@ -63,6 +63,7 @@
             top: 50%;
             transform: translateY(-100%);
             border: 1px solid var(--primary-color);
+            color: var(--primary-color);
 
             @include media('mobile') {
                 position: relative;
