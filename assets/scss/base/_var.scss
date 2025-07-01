@@ -1,0 +1,18 @@
+:root {
+    --ff-base: 'Anglecia', sans-serif;
+    --ff-secondary: 'Helvetica';
+    --content-padding-lg: 128px;
+    --content-padding-sm: 64px;
+
+    --white-color: #fff;
+    --black-color: #121212;
+    --primary-color: #522008;
+    --primary-bg: #f5ebe2;
+}
+
+@media (max-width: 767px) {
+    :root {
+        --content-padding-lg: 64px;
+        --content-padding-sm: 32px;
+    }
+}
