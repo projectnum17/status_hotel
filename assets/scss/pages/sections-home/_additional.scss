@@ -1,0 +1,119 @@
+@use '../../base/media' as *;
+@use '../../base/_mixins' as *;
+
+.main--home {
+    .additional {
+        padding-block: var(--content-padding-sm);
+        background: var(--primary-color);
+
+        &__head {
+            color: var(--white-color);
+        }
+
+        &__description {
+            max-width: 399px;
+        }
+
+        &__cards {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+
+            @include media('mobile') {
+                grid-template-columns: repeat(1, 1fr);
+            }
+        }
+
+        &__card {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+
+            @include media('mobile') {
+                gap: 12px;
+            }
+
+            @include hover {
+                .additional__card-thumb {
+                    img {
+                        transform: scale(1.1);
+                    }
+                }
+
+                .additional__card-descr {
+                    span {
+                        transform: rotate(-90deg);
+                    }
+                }
+            }
+
+            &-thumb {
+                position: relative;
+                overflow: hidden;
+                height: 412px;
+
+                @include media('mobile') {
+                    height: 350px;
+                }
+
+                img {
+                    height: 100%;
+                    width: 100%;
+                    object-fit: cover;
+                    @include transitions(0.5s);
+                }
+
+                &::after {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background: #0000003d;
+                }
+            }
+
+            &-descr {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                gap: 20px;
+                color: var(--white-color);
+
+                h4 {
+                    font: 400 24px / 100% var(--ff-secondary);
+                    margin: 0;
+                    letter-spacing: 0.2px;
+                    text-transform: uppercase;
+                    @include media('mobile') {
+                        font-size: 18px;
+                        line-height: 120%;
+                    }
+                    @include media('mobile') {
+                        font-size: 16px;
+                        line-height: 130%;
+                    }
+                }
+
+                span {
+                    display: inline-flex;
+                    flex-shrink: 0;
+                    width: 32px;
+                    height: 32px;
+                    @include transitions(0.5s);
+
+                    @include media('mobile') {
+                        width: 24px;
+                        height: 24px;
+                    }
+
+                    svg {
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+            }
+        }
+    }
+}

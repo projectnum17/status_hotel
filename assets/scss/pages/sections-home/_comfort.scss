@@ -1,0 +1,19 @@
+@use '../../base/media' as *;
+@use '../../base/mixins' as *;
+.main--home {
+    .comfort {
+        &__link {
+            max-width: 282px;
+            margin: 0 auto;
+            color: var(--primary-color);
+
+            @include hover {
+                background: var(--primary-color);
+            }
+
+            &::before {
+                background: #fff;
+            }
+        }
+    }
+}
