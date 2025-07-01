@@ -6,9 +6,18 @@ import heroSlider from './modules/heroSlider.js';
 import benefitsSlider from './modules/benefitsSlider.js';
 
 document.addEventListener('DOMContentLoaded', () => {
-    if (window.innerWidth < 768) {
-        mobileMenu();
-    }
+    let isMobileMenuInit = false;
+
+    const handleMobileMenu = () => {
+        if (window.innerWidth <= 1065 && !isMobileMenuInit) {
+            mobileMenu();
+            isMobileMenuInit = true;
+        }
+    };
+
+    handleMobileMenu();
+    window.addEventListener('resize', handleMobileMenu);
+
     headerFlow();
     heroSlider();
     benefitsSlider();

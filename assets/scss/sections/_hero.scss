@@ -126,9 +126,24 @@
 
         svg {
             transform: rotate(-90deg);
+            display: inline-block;
+            animation: arrowMove 1.5s ease-in-out infinite;
+
             @include media('mobile') {
                 width: 20px;
                 height: 20px;
+            }
+
+            @keyframes arrowMove {
+                0% {
+                    transform: rotate(-90deg) translateY(0);
+                }
+                50% {
+                    transform: rotate(-90deg) translateY(10px);
+                }
+                100% {
+                    transform: rotate(-90deg) translateY(0);
+                }
             }
         }
     }

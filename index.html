@@ -1,156 +1,229 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="description" content="Description" />
-        <title>Title</title>
-        <link
-            rel="stylesheet"
-            href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-        />
-        <link rel="stylesheet" href="./assets/css/style.min.css" />
-    </head>
 
-    <body>
-        <div class="mobile-menu">
-            <div class="container">
-                <div class="mobile-menu__row">
-                    <div class="mobile-menu__head">
-                        <div class="mobile-menu__col">
-                            <a
-                                class="mobile-menu__logo"
-                                href="javascript: void(0)"
-                            >
-                                <img
-                                    width="50"
-                                    height="48"
-                                    src="./assets/images/icons/logo-dark.svg"
-                                    alt="Logo"
-                                />
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Description" />
+    <title>Title</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./assets/css/style.min.css" />
+</head>
+
+<body>
+    <div class="mobile-menu">
+        <div class="container">
+            <div class="mobile-menu__row">
+                <div class="mobile-menu__head">
+                    <div class="mobile-menu__col">
+                        <a class="mobile-menu__logo" href="javascript: void(0)">
+                            <img width="50" height="48" src="./assets/images/icons/logo-dark.svg" alt="Logo" />
+                        </a>
+                        <div class="mobile-menu__lang js-lang-parent">
+                            <ul class="lang-list">
+                                <li class="lang-list__item current-lang">
+                                    <a href="javascript: void(0)">UA</a>
+                                    <ul class="lang-list__points js-lang-box">
+                                        <li>
+                                            <a href="javascript: void(0)">En</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript: void(0)">pl</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M4 6L8 10L12 6" stroke="#121212" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round"></path>
+                            </svg>
+                        </div>
+                    </div>
+                    <button class="mobile-menu__close js-menu-close">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#121212" class="w-8 h-8"
+                            viewBox="0 0 16 16">
+                            <path
+                                d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708">
+                            </path>
+                        </svg>
+                    </button>
+                </div>
+                <nav class="mobile-menu__nav">
+                    <ul class="mobile-menu__list">
+                        <li class="mobile-menu__item">
+                            <a href="javascript:void(0)" class="mobile-menu__link js-menu-submenu">
+                                НОМЕРИ
                             </a>
-                            <div class="mobile-menu__lang js-lang-parent">
-                                <ul class="lang-list">
-                                    <li class="lang-list__item current-lang">
-                                        <a href="javascript: void(0)">UA</a>
-                                        <ul
-                                            class="lang-list__points js-lang-box"
-                                        >
-                                            <li>
-                                                <a href="javascript: void(0)"
-                                                    >En</a
-                                                >
-                                            </li>
-                                            <li>
-                                                <a href="javascript: void(0)"
-                                                    >pl</a
-                                                >
-                                            </li>
-                                        </ul>
+                            <div class="mobile-menu__wrapper">
+                                <ul class="mobile-menu__submenu">
+                                    <li>
+                                        <a href="javascript: void(0)">ЛЮКС ДВОРІВНЕВИЙ</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript: void(0)">ЛЮКС ДВОКІМНАТНИЙ</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript: void(0)">НАПІВЛЮКС</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript: void(0)">БІЗНЕС-КОМФОРТ</a>
                                     </li>
                                 </ul>
-                                <svg
-                                    width="16"
-                                    height="16"
-                                    viewBox="0 0 16 16"
-                                    fill="none"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                >
-                                    <path
-                                        d="M4 6L8 10L12 6"
-                                        stroke="#121212"
-                                        stroke-width="1.5"
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                    ></path>
-                                </svg>
                             </div>
-                        </div>
-                        <button class="mobile-menu__close js-menu-close">
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                width="24"
-                                height="24"
-                                fill="#121212"
-                                class="w-8 h-8"
-                                viewBox="0 0 16 16"
-                            >
-                                <path
-                                    d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708"
-                                ></path>
-                            </svg>
-                        </button>
+                        </li>
+                        <li class="mobile-menu__item">
+                            <a href="javascript:void(0)" class="mobile-menu__link js-menu-submenu">
+                                РЕСТОРАН
+                            </a>
+                            <div class="mobile-menu__wrapper">
+                                <ul class="mobile-menu__submenu">
+                                    <li>
+                                        <a href="javascript: void(0)">БАНКЕТНИЙ ЗАЛ</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="mobile-menu__item">
+                            <a href="javascript:void(0)" class="mobile-menu__link">
+                                SPA
+                            </a>
+                        </li>
+                        <li class="mobile-menu__item">
+                            <a href="javascript:void(0)" class="mobile-menu__link">
+                                Конференц-зал
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="mobile-menu__contact">
+                    <div class="contact-item">
+                        <p>Рецепція (з 07:00 по 23:00)</p>
+                        <a href="tel+380933870808">+38 (093) 387-08-08</a>
                     </div>
-                    <nav class="mobile-menu__nav">
-                        <ul class="mobile-menu__list">
-                            <li class="mobile-menu__item">
-                                <a
-                                    href="javascript:void(0)"
-                                    class="mobile-menu__link js-menu-submenu"
-                                >
-                                    НОМЕРИ
+                    <div class="contact-item">
+                        <p>Рецепція (з 07:00 по 23:00)</p>
+                        <a href="tel+380933870808">+38 (093) 387-08-08</a>
+                    </div>
+                    <div class="contact-links">
+                        <a href="javascript: void(0)">
+                            <img width="24" height="24" src="./assets/images/icons/ico-viber.svg" alt="Viber" />
+                        </a>
+                        <a href="javascript: void(0)">
+                            <img width="24" height="24" src="./assets/images/icons/ico-telegram.svg" alt="Telegram" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="mobile-menu__row">
+                <a href="javascript:void(0)" class="mobile-menu__cta link--accent">
+                    <span>ЗАБРОНЮВАТИ</span>
+                    <span>
+                        <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6.5 6L19.5 19M19.5 19V6.52M19.5 19H7.02" stroke="#121212" stroke-width="1.5"
+                                stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                    </span>
+                </a>
+            </div>
+        </div>
+    </div>
+    <header class="header">
+        <div class="container">
+            <div class="header__row nav-block">
+                <nav class="header__nav">
+                    <ul class="header__list">
+                        <li class="header__list-item js-open-menu">
+                            <a href="javascript: void(0)" class="header__list-link">
+                                <span>НОМЕРИ</span>
+                                <span>
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M4 6L8 10L12 6" stroke="white" stroke-width="1.5"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </span>
+                            </a>
+                            <ul class="submenu">
+                                <li class="submenu__item">
+                                    <a href="javascript: void(0)" class="submenu__link">люкс дворівневий</a>
+                                </li>
+                                <li class="submenu__item">
+                                    <a href="javascript: void(0)" class="submenu__link">ЛЮКС ДВОКІМНАТНИЙ</a>
+                                </li>
+                                <li class="submenu__item">
+                                    <a href="javascript: void(0)" class="submenu__link">напівлюкс</a>
+                                </li>
+                                <li class="submenu__item">
+                                    <a href="javascript: void(0)" class="submenu__link">БІЗНЕС-КОМФОРТ</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="header__list-item js-open-menu">
+                            <a href="javascript: void(0)" class="header__list-link">
+                                <span>РЕСТОРАН</span>
+                                <span>
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M4 6L8 10L12 6" stroke="white" stroke-width="1.5"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </span>
+                            </a>
+                            <ul class="submenu">
+                                <li class="submenu__item">
+                                    <a href="javascript: void(0)" class="submenu__link">банкетний зал</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="header__list-item">
+                            <a href="javascript: void(0)" class="header__list-link">SPA</a>
+                        </li>
+                        <li class="header__list-item">
+                            <a href="javascript: void(0)" class="header__list-link">Конференц-зал</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="header__row logo-block">
+                <a href="javascript: void(0)" class="header__logo">
+                    <img width="74" height="72" src="./assets/images/icons/logo.svg" alt="Logo" />
+                </a>
+            </div>
+            <div class="header__row contact-block">
+                <ul class="header__lang">
+                    <li class="header__lang-item">
+                        UA
+                        <ul class="lang">
+                            <li class="lang__item">
+                                <a class="lang__item-link" href="javascript: void(0)">
+                                    EN
                                 </a>
-                                <div class="mobile-menu__wrapper">
-                                    <ul class="mobile-menu__submenu">
-                                        <li>
-                                            <a href="javascript: void(0)"
-                                                >ЛЮКС ДВОРІВНЕВИЙ</a
-                                            >
-                                        </li>
-                                        <li>
-                                            <a href="javascript: void(0)"
-                                                >ЛЮКС ДВОКІМНАТНИЙ</a
-                                            >
-                                        </li>
-                                        <li>
-                                            <a href="javascript: void(0)"
-                                                >НАПІВЛЮКС</a
-                                            >
-                                        </li>
-                                        <li>
-                                            <a href="javascript: void(0)"
-                                                >БІЗНЕС-КОМФОРТ</a
-                                            >
-                                        </li>
-                                    </ul>
-                                </div>
                             </li>
-                            <li class="mobile-menu__item">
-                                <a
-                                    href="javascript:void(0)"
-                                    class="mobile-menu__link js-menu-submenu"
-                                >
-                                    РЕСТОРАН
-                                </a>
-                                <div class="mobile-menu__wrapper">
-                                    <ul class="mobile-menu__submenu">
-                                        <li>
-                                            <a href="javascript: void(0)"
-                                                >БАНКЕТНИЙ ЗАЛ</a
-                                            >
-                                        </li>
-                                    </ul>
-                                </div>
-                            </li>
-                            <li class="mobile-menu__item">
-                                <a
-                                    href="javascript:void(0)"
-                                    class="mobile-menu__link"
-                                >
-                                    SPA
-                                </a>
-                            </li>
-                            <li class="mobile-menu__item">
-                                <a
-                                    href="javascript:void(0)"
-                                    class="mobile-menu__link"
-                                >
-                                    Конференц-зал
+                            <li class="lang__item">
+                                <a class="lang__item-link" href="javascript: void(0)">
+                                    PL
                                 </a>
                             </li>
                         </ul>
-                    </nav>
-                    <div class="mobile-menu__contact">
+                    </li>
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4 6L8 10L12 6" stroke="white" stroke-width="1.5" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                </ul>
+                <div class="header__contact">
+                    <a class="header__phone" href="tel:+380322245421">
+                        <span>+38 (032) 224-54-21</span>
+                        <span>
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M4 6L8 10L12 6" stroke="white" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </span>
+                    </a>
+                    <div class="header__contact-rect">
                         <div class="contact-item">
                             <p>Рецепція (з 07:00 по 23:00)</p>
                             <a href="tel+380933870808">+38 (093) 387-08-08</a>
@@ -161,478 +234,132 @@
                         </div>
                         <div class="contact-links">
                             <a href="javascript: void(0)">
-                                <img
-                                    width="24"
-                                    height="24"
-                                    src="./assets/images/icons/ico-viber.svg"
-                                    alt="Viber"
-                                />
+                                <img width="24" height="24" src="./assets/images/icons/ico-viber.svg" alt="Viber" />
                             </a>
                             <a href="javascript: void(0)">
-                                <img
-                                    width="24"
-                                    height="24"
-                                    src="./assets/images/icons/ico-telegram.svg"
-                                    alt="Telegram"
-                                />
+                                <img width="24" height="24" src="./assets/images/icons/ico-telegram.svg"
+                                    alt="Telegram" />
                             </a>
                         </div>
                     </div>
                 </div>
-                <div class="mobile-menu__row">
-                    <a
-                        href="javascript:void(0)"
-                        class="mobile-menu__cta link--accent"
-                    >
-                        <span>ЗАБРОНЮВАТИ</span>
-                        <span>
-                            <svg
-                                width="25"
-                                height="24"
-                                viewBox="0 0 25 24"
-                                fill="none"
-                                xmlns="http://www.w3.org/2000/svg"
-                            >
-                                <path
-                                    d="M6.5 6L19.5 19M19.5 19V6.52M19.5 19H7.02"
-                                    stroke="#121212"
-                                    stroke-width="1.5"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                ></path>
-                            </svg>
-                        </span>
-                    </a>
-                </div>
+                <a href="javascript: void(0)" class="header__link link--accent">
+                    <span>ЗАБРОНЮВАТИ</span>
+                    <span><svg width="25" height="24" viewBox="0 0 25 24" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6.5 6L19.5 19M19.5 19V6.52M19.5 19H7.02" stroke="white" stroke-width="1.5"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </span>
+                </a>
             </div>
+            <button class="header__burger js-burger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
-        <header class="header">
+    </header>
+    <main class="main">
+        <section class="hero">
+            <div class="hero__gallery swiper">
+                <div class="hero__gallery-wrapper swiper-wrapper">
+                    <div class="hero__gallery-slide swiper-slide" style="
+                                background-image: url(./assets/images/bg-hero.jpg);
+                            "></div>
+                    <div class="hero__gallery-slide swiper-slide" style="
+                                background-image: url(./assets/images/bg-hero2.jpg);
+                            "></div>
+                    <div class="hero__gallery-slide swiper-slide" style="
+                                background-image: url(./assets/images/bg-hero3.jpg);
+                            "></div>
+                </div>
+            </div>
             <div class="container">
-                <div class="header__row nav-block">
-                    <nav class="header__nav">
-                        <ul class="header__list">
-                            <li class="header__list-item js-open-menu">
-                                <a
-                                    href="javascript: void(0)"
-                                    class="header__list-link"
-                                >
-                                    <span>НОМЕРИ</span>
-                                    <span>
-                                        <svg
-                                            width="16"
-                                            height="16"
-                                            viewBox="0 0 16 16"
-                                            fill="none"
-                                            xmlns="http://www.w3.org/2000/svg"
-                                        >
-                                            <path
-                                                d="M4 6L8 10L12 6"
-                                                stroke="white"
-                                                stroke-width="1.5"
-                                                stroke-linecap="round"
-                                                stroke-linejoin="round"
-                                            />
-                                        </svg>
-                                    </span>
-                                </a>
-                                <ul class="submenu">
-                                    <li class="submenu__item">
-                                        <a
-                                            href="javascript: void(0)"
-                                            class="submenu__link"
-                                            >люкс дворівневий</a
-                                        >
-                                    </li>
-                                    <li class="submenu__item">
-                                        <a
-                                            href="javascript: void(0)"
-                                            class="submenu__link"
-                                            >ЛЮКС ДВОКІМНАТНИЙ</a
-                                        >
-                                    </li>
-                                    <li class="submenu__item">
-                                        <a
-                                            href="javascript: void(0)"
-                                            class="submenu__link"
-                                            >напівлюкс</a
-                                        >
-                                    </li>
-                                    <li class="submenu__item">
-                                        <a
-                                            href="javascript: void(0)"
-                                            class="submenu__link"
-                                            >БІЗНЕС-КОМФОРТ</a
-                                        >
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="header__list-item js-open-menu">
-                                <a
-                                    href="javascript: void(0)"
-                                    class="header__list-link"
-                                >
-                                    <span>РЕСТОРАН</span>
-                                    <span>
-                                        <svg
-                                            width="16"
-                                            height="16"
-                                            viewBox="0 0 16 16"
-                                            fill="none"
-                                            xmlns="http://www.w3.org/2000/svg"
-                                        >
-                                            <path
-                                                d="M4 6L8 10L12 6"
-                                                stroke="white"
-                                                stroke-width="1.5"
-                                                stroke-linecap="round"
-                                                stroke-linejoin="round"
-                                            />
-                                        </svg>
-                                    </span>
-                                </a>
-                                <ul class="submenu">
-                                    <li class="submenu__item">
-                                        <a
-                                            href="javascript: void(0)"
-                                            class="submenu__link"
-                                            >банкетний зал</a
-                                        >
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="header__list-item">
-                                <a
-                                    href="javascript: void(0)"
-                                    class="header__list-link"
-                                    >SPA</a
-                                >
-                            </li>
-                            <li class="header__list-item">
-                                <a
-                                    href="javascript: void(0)"
-                                    class="header__list-link"
-                                    >Конференц-зал</a
-                                >
-                            </li>
-                        </ul>
-                    </nav>
-                </div>
-                <div class="header__row logo-block">
-                    <a href="javascript: void(0)" class="header__logo">
-                        <img
-                            width="74"
-                            height="72"
-                            src="./assets/images/icons/logo.svg"
-                            alt="Logo"
-                        />
-                    </a>
-                </div>
-                <div class="header__row contact-block">
-                    <ul class="header__lang">
-                        <li class="header__lang-item">
-                            UA
-                            <ul class="lang">
-                                <li class="lang__item">
-                                    <a
-                                        class="lang__item-link"
-                                        href="javascript: void(0)"
-                                    >
-                                        EN
-                                    </a>
-                                </li>
-                                <li class="lang__item">
-                                    <a
-                                        class="lang__item-link"
-                                        href="javascript: void(0)"
-                                    >
-                                        PL
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
-                        <svg
-                            width="16"
-                            height="16"
-                            viewBox="0 0 16 16"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                        >
-                            <path
-                                d="M4 6L8 10L12 6"
-                                stroke="white"
-                                stroke-width="1.5"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                            />
-                        </svg>
-                    </ul>
-                    <div class="header__contact">
-                        <a class="header__phone" href="tel:+380322245421">
-                            <span>+38 (032) 224-54-21</span>
-                            <span>
-                                <svg
-                                    width="16"
-                                    height="16"
-                                    viewBox="0 0 16 16"
-                                    fill="none"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                >
-                                    <path
-                                        d="M4 6L8 10L12 6"
-                                        stroke="white"
-                                        stroke-width="1.5"
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                    />
-                                </svg>
-                            </span>
-                        </a>
-                        <div class="header__contact-rect">
-                            <div class="contact-item">
-                                <p>Рецепція (з 07:00 по 23:00)</p>
-                                <a href="tel+380933870808"
-                                    >+38 (093) 387-08-08</a
-                                >
-                            </div>
-                            <div class="contact-item">
-                                <p>Рецепція (з 07:00 по 23:00)</p>
-                                <a href="tel+380933870808"
-                                    >+38 (093) 387-08-08</a
-                                >
-                            </div>
-                            <div class="contact-links">
-                                <a href="javascript: void(0)">
-                                    <img
-                                        width="24"
-                                        height="24"
-                                        src="./assets/images/icons/ico-viber.svg"
-                                        alt="Viber"
-                                    />
-                                </a>
-                                <a href="javascript: void(0)">
-                                    <img
-                                        width="24"
-                                        height="24"
-                                        src="./assets/images/icons/ico-telegram.svg"
-                                        alt="Telegram"
-                                    />
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <a
-                        href="javascript: void(0)"
-                        class="header__link link--accent"
-                    >
-                        <span>ЗАБРОНЮВАТИ</span>
-                        <span
-                            ><svg
-                                width="25"
-                                height="24"
-                                viewBox="0 0 25 24"
-                                fill="none"
-                                xmlns="http://www.w3.org/2000/svg"
-                            >
-                                <path
-                                    d="M6.5 6L19.5 19M19.5 19V6.52M19.5 19H7.02"
-                                    stroke="white"
-                                    stroke-width="1.5"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                />
+                <div class="hero__content">
+                    <h1 class="hero__title">Status</h1>
+                    <p class="hero__subtitle">
+                        <span>готель</span>
+                        <span>&</span>
+                        <span>ресторан</span>
+                    </p>
+                    <a href="javascript: void(0)" class="hero__link link--accent">
+                        <span>ОБРАТИ НОМЕР</span>
+                        <span><svg width="25" height="24" viewBox="0 0 25 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M6.5 6L19.5 19M19.5 19V6.52M19.5 19H7.02" stroke="white" stroke-width="1.5"
+                                    stroke-linecap="round" stroke-linejoin="round" />
                             </svg>
                         </span>
                     </a>
+                    <div class="hero__pagination"></div>
                 </div>
-                <button class="header__burger js-burger">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
+                <div class="hero__deco">
+                    <p>гортай вниз</p>
+                    <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12.5 3L12.5 21M12.5 21L21 12.5M12.5 21L4 12.5" stroke="white" stroke-width="1.5"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </div>
             </div>
-        </header>
-        <main class="main">
-            <section class="hero">
-                <div class="hero__gallery swiper">
-                    <div class="hero__gallery-wrapper swiper-wrapper">
-                        <div
-                            class="hero__gallery-slide swiper-slide"
-                            style="
-                                background-image: url(./assets/images/bg-hero.jpg);
-                            "
-                        ></div>
-                        <div
-                            class="hero__gallery-slide swiper-slide"
-                            style="
-                                background-image: url(./assets/images/bg-hero2.jpg);
-                            "
-                        ></div>
-                        <div
-                            class="hero__gallery-slide swiper-slide"
-                            style="
-                                background-image: url(./assets/images/bg-hero3.jpg);
-                            "
-                        ></div>
-                    </div>
-                </div>
-                <div class="container">
-                    <div class="hero__content">
-                        <h1 class="hero__title">Status</h1>
-                        <p class="hero__subtitle">
-                            <span>готель</span>
-                            <span>&</span>
-                            <span>ресторан</span>
-                        </p>
-                        <a
-                            href="javascript: void(0)"
-                            class="hero__link link--accent"
-                        >
-                            <span>ОБРАТИ НОМЕР</span>
-                            <span
-                                ><svg
-                                    width="25"
-                                    height="24"
-                                    viewBox="0 0 25 24"
-                                    fill="none"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                >
-                                    <path
-                                        d="M6.5 6L19.5 19M19.5 19V6.52M19.5 19H7.02"
-                                        stroke="white"
-                                        stroke-width="1.5"
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                    />
-                                </svg>
-                            </span>
-                        </a>
-                        <div class="hero__pagination"></div>
-                    </div>
-                    <div class="hero__deco">
-                        <p>гортай вниз</p>
-                        <svg
-                            width="25"
-                            height="24"
-                            viewBox="0 0 25 24"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                        >
-                            <path
-                                d="M12.5 3L12.5 21M12.5 21L21 12.5M12.5 21L4 12.5"
-                                stroke="white"
-                                stroke-width="1.5"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                            />
+        </section>
+        <section class="benefits">
+            <div class="container">
+                <h2 class="benefits__title">
+                    Для поціновувачів <br />
+                    затишку та комфорту!
+                </h2>
+            </div>
+            <div class="benefits__gallery swiper">
+                <div class="benefits__gallery-nav">
+                    <button class="benefits__gallery-btn btn--prev">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M21 12H3M3 12L11.5 3.5M3 12L11.5 20.5" stroke="#522008" stroke-width="1.5"
+                                stroke-linecap="round" stroke-linejoin="round" />
                         </svg>
+                    </button>
+                    <button class="benefits__gallery-btn btn--next">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3 12H21M21 12L12.5 3.5M21 12L12.5 20.5" stroke="#522008" stroke-width="1.5"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="benefits__gallery-wrapper swiper-wrapper">
+                    <div class="benefits__gallery-slide swiper-slide">
+                        <img loading="lazy" src="./assets/images/benefit_1.jpg" alt="Slide 1" />
+                    </div>
+                    <div class="benefits__gallery-slide swiper-slide">
+                        <img loading="lazy" src="./assets/images/benefit_2.jpg" alt="Slide 1" />
+                    </div>
+                    <div class="benefits__gallery-slide swiper-slide">
+                        <img loading="lazy" src="./assets/images/benefit_3.jpg" alt="Slide 1" />
+                    </div>
+                    <div class="benefits__gallery-slide swiper-slide">
+                        <img loading="lazy" src="./assets/images/benefit_1.jpg" alt="Slide 1" />
+                    </div>
+                    <div class="benefits__gallery-slide swiper-slide">
+                        <img loading="lazy" src="./assets/images/benefit_2.jpg" alt="Slide 1" />
+                    </div>
+                    <div class="benefits__gallery-slide swiper-slide">
+                        <img loading="lazy" src="./assets/images/benefit_3.jpg" alt="Slide 1" />
                     </div>
                 </div>
-            </section>
-            <section class="benefits">
-                <div class="container">
-                    <h2 class="benefits__title">
-                        Для поціновувачів <br />
-                        затишку та комфорту!
-                    </h2>
-                </div>
-                <div class="benefits__gallery swiper">
-                    <div class="benefits__gallery-nav">
-                        <button class="benefits__gallery-btn btn--prev">
-                            <svg
-                                width="24"
-                                height="24"
-                                viewBox="0 0 24 24"
-                                fill="none"
-                                xmlns="http://www.w3.org/2000/svg"
-                            >
-                                <path
-                                    d="M21 12H3M3 12L11.5 3.5M3 12L11.5 20.5"
-                                    stroke="#522008"
-                                    stroke-width="1.5"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                />
-                            </svg>
-                        </button>
-                        <button class="benefits__gallery-btn btn--next">
-                            <svg
-                                width="24"
-                                height="24"
-                                viewBox="0 0 24 24"
-                                fill="none"
-                                xmlns="http://www.w3.org/2000/svg"
-                            >
-                                <path
-                                    d="M3 12H21M21 12L12.5 3.5M21 12L12.5 20.5"
-                                    stroke="#522008"
-                                    stroke-width="1.5"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                />
-                            </svg>
-                        </button>
-                    </div>
-                    <div class="benefits__gallery-wrapper swiper-wrapper">
-                        <div class="benefits__gallery-slide swiper-slide">
-                            <img
-                                loading="lazy"
-                                src="./assets/images/benefit_1.jpg"
-                                alt="Slide 1"
-                            />
-                        </div>
-                        <div class="benefits__gallery-slide swiper-slide">
-                            <img
-                                loading="lazy"
-                                src="./assets/images/benefit_2.jpg"
-                                alt="Slide 1"
-                            />
-                        </div>
-                        <div class="benefits__gallery-slide swiper-slide">
-                            <img
-                                loading="lazy"
-                                src="./assets/images/benefit_3.jpg"
-                                alt="Slide 1"
-                            />
-                        </div>
-                        <div class="benefits__gallery-slide swiper-slide">
-                            <img
-                                loading="lazy"
-                                src="./assets/images/benefit_1.jpg"
-                                alt="Slide 1"
-                            />
-                        </div>
-                        <div class="benefits__gallery-slide swiper-slide">
-                            <img
-                                loading="lazy"
-                                src="./assets/images/benefit_2.jpg"
-                                alt="Slide 1"
-                            />
-                        </div>
-                        <div class="benefits__gallery-slide swiper-slide">
-                            <img
-                                loading="lazy"
-                                src="./assets/images/benefit_3.jpg"
-                                alt="Slide 1"
-                            />
-                        </div>
-                    </div>
-                </div>
-                <div class="container">
-                    <p class="benefits__description">
-                        Наш готель — це унікальна атмосфера затишку та
-                        гостинності, що залишається в пам'яті гостей завдяки
-                        професійному обслуговуванню та індивідуальному дизайну
-                        номерів. Ми знаходимося за 0,5 км від Львова, на
-                        магістралі Київ-Чоп, що забезпечує швидкий та зручний
-                        доступ для Вашого комфортного відпочинку
-                    </p>
-                </div>
-            </section>
-        </main>
-        <script
-            defer
-            src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"
-        ></script>
-        <script defer src="./assets/scripts/main.js" type="module"></script>
-    </body>
+            </div>
+            <div class="container">
+                <p class="benefits__description">
+                    Наш готель — це унікальна атмосфера затишку та
+                    гостинності, що залишається в пам'яті гостей завдяки
+                    професійному обслуговуванню та індивідуальному дизайну
+                    номерів. Ми знаходимося за 0,5 км від Львова, на
+                    магістралі Київ-Чоп, що забезпечує швидкий та зручний
+                    доступ для Вашого комфортного відпочинку
+                </p>
+            </div>
+        </section>
+    </main>
+    <script defer src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script defer src="./assets/scripts/main.js" type="module"></script>
+</body>
+
 </html>

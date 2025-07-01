@@ -129,7 +129,8 @@
 
                 &.show {
                     .submenu {
-                        display: flex;
+                        opacity: 1;
+                        visibility: visible;
                     }
                 }
 
@@ -141,7 +142,9 @@
             }
 
             .submenu {
-                display: none;
+                @include transitions(0.3s);
+                opacity: 0;
+                visibility: hidden;
                 width: max-content;
                 position: absolute;
                 bottom: 0;
