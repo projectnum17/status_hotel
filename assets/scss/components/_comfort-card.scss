@@ -67,9 +67,7 @@
         border-radius: 50%;
         border: 1px solid var(--white-color);
         color: var(--white-color);
-
-        @include transitions(.5s);
-
+        @include transitions(0.5s);
         @include media('tablet') {
             min-width: 120px;
             min-height: 120px;
@@ -136,6 +134,7 @@
             gap: 15px;
         }
     }
+
     .box {
         display: flex;
         align-items: center;

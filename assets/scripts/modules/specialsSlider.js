@@ -3,8 +3,9 @@ const specialsSlider = () => {
     const paginationEl = document.querySelector('.specials-pagination');
     if (!sliderEl) return;
 
+    const slidesCount = sliderEl.querySelectorAll('.swiper-slide').length;
+
     const updatePaginationVisibility = () => {
-        const slidesCount = sliderEl.querySelectorAll('.swiper-slide').length;
         const isLargeScreen = window.innerWidth > 991;
 
         if (paginationEl) {
@@ -19,11 +20,14 @@ const specialsSlider = () => {
     updatePaginationVisibility();
     window.addEventListener('resize', updatePaginationVisibility);
 
+    const shouldCenterSlides = slidesCount > 4;
+
     return new Swiper(sliderEl, {
         slidesPerView: 2.5,
         grabCursor: true,
-        centeredSlides: true,
-        centeredSlidesBounds: true,
+        centeredSlides: shouldCenterSlides,
+        // centeredSlidesBounds: true,
+        loop: shouldCenterSlides,
         spaceBetween: 24,
         autoplay: {
             delay: 3000,
@@ -32,7 +36,6 @@ const specialsSlider = () => {
         speed: 1000,
         pagination: {
             el: '.specials-pagination',
-            clickable: true,
         },
         breakpoints: {
             320: {
@@ -42,9 +45,11 @@ const specialsSlider = () => {
             },
             768: {
                 slidesPerView: 1.5,
+                centeredSlides: shouldCenterSlides,
             },
             992: {
                 slidesPerView: 2.5,
+                centeredSlides: shouldCenterSlides,
             },
         },
     });

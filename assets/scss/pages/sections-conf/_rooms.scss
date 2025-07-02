@@ -1,11 +1,15 @@
 @use '../../base/media' as *;
 @use '../../base/mixins' as *;
-
-.main--apartments {
-    .apartments {
+.main--conf {
+    .rooms {
         padding-block: var(--content-padding-sm);
+
+        &__description {
+            max-width: 421px;
+        }
+
         &__title {
-            color: var(--primary-color);
+            max-width: 600px;
         }
 
         &__cards {
@@ -38,7 +42,7 @@
                     flex-direction: column;
                 }
 
-                .apartments__card-info {
+                .rooms__card-info {
                     padding: 20px 56px 20px 20px;
                     @include media('mobile') {
                         padding: 20px;
@@ -51,39 +55,10 @@
                 @include media('mobile') {
                     flex-direction: column;
                 }
-                .apartments__card-info {
+                .rooms__card-info {
                     padding: 20px 20px 20px 56px;
                     @include media('mobile') {
                         padding: 20px;
-                    }
-                }
-            }
-
-            @include hover {
-                background: var(--primary-color);
-
-                .apartments__card-thumb {
-                    img {
-                        transform: scale(1.1);
-                    }
-                }
-
-                .apartments__card-title,
-                .apartments__card-descr,
-                .box__data,
-                .box__ico,
-                .link--primary {
-                    color: var(--white-color);
-                }
-
-                .link--primary {
-                    color: var(--primary-color);
-                    span:last-child {
-                        transform: rotate(-90deg);
-                    }
-
-                    &::before {
-                        transform: translate(-50%, 100%) scale(20);
                     }
                 }
             }
@@ -93,6 +68,20 @@
                 max-width: 927px;
                 height: 544px;
                 overflow: hidden;
+                position: relative;
+                &::after {
+                    content: '';
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background: linear-gradient(
+                        180deg,
+                        rgba(0, 0, 0, 0) 0%,
+                        rgba(0, 0, 0, 0.32) 62.84%
+                    );
+                    position: absolute;
+                }
 
                 @include media('mobile') {
                     height: 350px;
@@ -142,7 +131,6 @@
             }
 
             &-labels {
-                @include transitions(0.5s);
                 display: flex;
                 flex-direction: column;
                 gap: 24px;
@@ -159,7 +147,6 @@
                     gap: 8px;
 
                     &__ico {
-                        @include transitions(0.5s);
                         display: inline-flex;
                         width: 24px;
                         height: 24px;
@@ -168,7 +155,6 @@
                     }
 
                     &__data {
-                        @include transitions(0.5s);
                         font: 300 18px / 100% var(--ff-secondary);
                         color: var(--black-color);
 
@@ -182,20 +168,17 @@
             .link--primary {
                 @include transitions(0.5s);
                 max-width: 282px;
-                color: var(--primary-color);
+                font-size: 16px;
+                color: var(--white-color);
+                background: var(--primary-color);
 
                 &::before {
                     background: #fff;
                 }
 
                 @include hover {
-                    span:last-child {
-                        transform: rotate(0);
-                    }
-
-                    &::before {
-                        transform: translate(-50%, 100%) scale(0);
-                    }
+                    color: var(--primary-color);
+                    background: var(--primary-color);
                 }
 
                 @include media('mobile') {

@@ -1,5 +1,6 @@
 @use '../base/media' as *;
 @use '../base/_mixins' as *;
+
 .benefits-gallery {
     position: relative;
     margin-bottom: 44px;
@@ -7,7 +8,6 @@
     @include media('mobile') {
         padding-inline: 0;
     }
-
     @include media('tablet') {
         margin-bottom: 22px;
         display: flex;
@@ -17,7 +17,6 @@
 
     &__btn {
         z-index: 5;
-        @include transitions(0.3s);
         width: 44px;
         height: 44px;
         display: inline-flex;
@@ -30,13 +29,12 @@
         transform: translateY(-100%);
         border: 1px solid var(--primary-color);
         color: var(--primary-color);
-
+        @include transitions(0.3s);
         @include media('tablet') {
             position: relative;
             top: auto;
             transform: translateY(0);
         }
-
         @include hover {
             background: var(--primary-color);
             color: var(--white-color);
@@ -68,11 +66,10 @@
     }
 
     &__slide {
-        @include transitions(0.2s);
         height: 580px;
         transform: scale(0.9) !important;
         position: relative;
-
+        @include transitions(0.2s);
         img {
             height: 100%;
             width: 100%;

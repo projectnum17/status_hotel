@@ -1,0 +1,55 @@
+@use '../../base/media' as *;
+@use '../../base/mixins' as *;
+.main--restaurant {
+    .about {
+        padding-block: 225px;
+        position: relative;
+        overflow: hidden;
+
+        @include media('tablet') {
+            padding-block: 64px;
+        }
+
+        @include media('mobile') {
+            padding-block: 32px;
+        }
+
+        &::after {
+            content: '';
+            width: 546px;
+            height: 546px;
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border: 1px solid #59000014;
+
+            @include media('mobile') {
+                width: 250px;
+                height: 250px;
+            }
+        }
+
+        &__head {
+            flex-direction: column;
+            gap: 44px;
+            max-width: 1046px;
+            margin: 0 auto;
+            text-align: center;
+
+            @include media('mobile') {
+                gap: 22px;
+            }
+        }
+
+        &__title {
+            max-width: 100%;
+            color: var(--primary-color);
+        }
+
+        &__description {
+            max-width: 582px;
+        }
+    }
+}

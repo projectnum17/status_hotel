@@ -1,0 +1,15 @@
+@use '../../base/media' as *;
+@use '../../base/mixins' as *;
+
+.main--restaurant {
+    .meal {
+        padding-block: var(--content-padding-sm);
+        &__title {
+            max-width: 100%;
+        }
+
+        &__description {
+            max-width: 306px;
+        }
+    }
+}

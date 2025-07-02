@@ -3,8 +3,25 @@
 
 .main--home {
     .additional {
+        position: relative;
         padding-block: var(--content-padding-sm);
         background: var(--primary-color);
+        &::after {
+            pointer-events: none;
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1;
+            background: url('../images/decoration_2.svg') no-repeat center center / cover;
+        }
+
+        .container {
+            position: relative;
+            z-index: 2;
+        }
 
         &__head {
             color: var(--white-color);
@@ -12,6 +29,10 @@
 
         &__description {
             max-width: 399px;
+        }
+
+        &__title {
+            color: var(--white-color);
         }
 
         &__cards {

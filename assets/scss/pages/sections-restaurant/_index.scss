@@ -1,7 +1,7 @@
-@forward 'hero';
-@forward 'info';
-@forward 'previews';
-.main--apartments-item {
+@forward 'about';
+@forward 'meal';
+@forward 'area';
+.main--restaurant {
     section:nth-child(3) {
         position: relative;
 

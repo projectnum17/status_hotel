@@ -73,6 +73,7 @@ section {
     }
 
     &::after {
+        pointer-events: none;
         content: '';
         width: 569px;
         height: 569px;
@@ -193,7 +194,6 @@ section {
     }
 
     &__description {
-        max-width: 432px;
         color: var(--black-color);
     }
 }
