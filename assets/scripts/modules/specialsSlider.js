@@ -1,8 +1,10 @@
 const specialsSlider = () => {
-    return new Swiper('.specials__gallery', {
+    const sliderEl = document.querySelector('.specials__gallery');
+    if (!sliderEl) return;
+
+    return new Swiper(sliderEl, {
         slidesPerView: 3,
         grabCursor: true,
-        // centeredSlides: true,
         loop: true,
         spaceBetween: 24,
         autoplay: {

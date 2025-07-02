@@ -1,5 +1,8 @@
 const heroSlider = () => {
-    return new Swiper('.hero__gallery', {
+    const sliderEl = document.querySelector('.hero__gallery');
+    if (!sliderEl) return;
+
+    return new Swiper(sliderEl, {
         slidesPerView: 1,
         effect: 'fade',
         loop: true,
@@ -8,8 +11,8 @@ const heroSlider = () => {
         },
         speed: 1500,
         pagination: {
-            el: '.hero__pagination'
-        }
+            el: '.hero__pagination',
+        },
     });
 };
 

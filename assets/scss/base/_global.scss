@@ -195,7 +195,6 @@ section {
 
     &__text {
         font: 300 24px / 100% var(--ff-secondary);
-        letter-spacing: 0.2px;
         max-width: 239px;
 
         @include media('tablet') {

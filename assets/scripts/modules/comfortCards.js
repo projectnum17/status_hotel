@@ -3,6 +3,8 @@ const comfortCard = () => {
     const showMoreBtn = document.querySelector('.comfort__link');
     const visibleCount = 2;
 
+    if (!cards.length) return;
+
     cards.forEach((card, index) => {
         if (index >= visibleCount) {
             card.style.display = 'none';

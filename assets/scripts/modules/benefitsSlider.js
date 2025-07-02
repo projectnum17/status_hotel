@@ -1,5 +1,8 @@
 const benefitsSlider = () => {
-    return new Swiper('.benefits__gallery', {
+    const sliderEl = document.querySelector('.benefits__gallery');
+    if (!sliderEl) return;
+
+    return new Swiper(sliderEl, {
         slidesPerView: 3,
         grabCursor: true,
         loop: true,
@@ -22,8 +25,8 @@ const benefitsSlider = () => {
             },
             768: {
                 slidesPerView: 3,
-            }
-        }
+            },
+        },
     });
 };
 
