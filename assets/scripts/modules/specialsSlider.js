@@ -1,11 +1,29 @@
 const specialsSlider = () => {
-    const sliderEl = document.querySelector('.specials__gallery');
+    const sliderEl = document.querySelector('.specials-gallery');
+    const paginationEl = document.querySelector('.specials-pagination');
     if (!sliderEl) return;
 
+    const updatePaginationVisibility = () => {
+        const slidesCount = sliderEl.querySelectorAll('.swiper-slide').length;
+        const isLargeScreen = window.innerWidth > 991;
+
+        if (paginationEl) {
+            if (isLargeScreen && slidesCount < 3) {
+                paginationEl.style.display = 'none';
+            } else {
+                paginationEl.style.display = '';
+            }
+        }
+    };
+
+    updatePaginationVisibility();
+    window.addEventListener('resize', updatePaginationVisibility);
+
     return new Swiper(sliderEl, {
-        slidesPerView: 3,
+        slidesPerView: 2.5,
         grabCursor: true,
-        loop: true,
+        centeredSlides: true,
+        centeredSlidesBounds: true,
         spaceBetween: 24,
         autoplay: {
             delay: 3000,
@@ -13,19 +31,20 @@ const specialsSlider = () => {
         },
         speed: 1000,
         pagination: {
-            el: '.specials__pagination',
+            el: '.specials-pagination',
             clickable: true,
         },
         breakpoints: {
             320: {
                 slidesPerView: 1,
                 spaceBetween: 15,
+                centeredSlides: false,
             },
             768: {
                 slidesPerView: 1.5,
             },
             992: {
-                slidesPerView: 3,
+                slidesPerView: 2.5,
             },
         },
     });

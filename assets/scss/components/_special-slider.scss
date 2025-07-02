@@ -1,17 +1,17 @@
 @use '../base/media' as *;
 @use '../base/_mixins' as *;
 
-.specials__gallery {
+.specials-gallery {
     margin-bottom: 56px;
     padding-inline: 20px;
     @include media('mobile') {
         padding-inline: 8px;
     }
-    &-slide {
+    &__slide {
         height: auto;
     }
 
-    &-item {
+    &__item {
         display: flex;
         flex-direction: column;
         gap: 24px;
@@ -106,7 +106,7 @@
         }
     }
 }
-.specials__pagination {
+.specials-pagination {
     display: flex;
     gap: 8px;
     justify-content: center;

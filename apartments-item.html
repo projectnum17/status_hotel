@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Description" />
-    <title>Status | Home</title>
+    <title>Status | Apartments Item</title>
     <link rel="icon" href="./assets/images/icons/logo-dark.svg" type="image/svg+xml">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="./assets/css/style.min.css" />
@@ -261,31 +261,20 @@
             </button>
         </div>
     </header>
-    <main class="main main--home">
-        <section class="hero">
-            <div class="hero__gallery swiper">
-                <div class="hero__gallery-wrapper swiper-wrapper">
-                    <div class="hero__gallery-slide swiper-slide" style="
-                                background-image: url(./assets/images/bg-hero.jpg);
-                            "></div>
-                    <div class="hero__gallery-slide swiper-slide" style="
-                                background-image: url(./assets/images/bg-hero2.jpg);
-                            "></div>
-                    <div class="hero__gallery-slide swiper-slide" style="
-                                background-image: url(./assets/images/bg-hero3.jpg);
-                            "></div>
-                </div>
-            </div>
+    <main class="main main--apartments-item">
+        <section class="hero" style="background-image: url(./assets/images/ap-item.jpg);">
             <div class="container">
                 <div class="hero__content">
-                    <h1 class="hero__title">Status</h1>
-                    <p class="hero__subtitle">
-                        <span>готель</span>
-                        <span>&</span>
-                        <span>ресторан</span>
-                    </p>
+                    <button class="hero__back">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M21 12H3M3 12L11.5 3.5M3 12L11.5 20.5" stroke="white" stroke-width="1.5"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                        <span>повернутись назад</span>
+                    </button>
+                    <h1 class="hero__title">люкс дворівнений</h1>
                     <a href="javascript: void(0)" class="hero__link link--accent">
-                        <span>ОБРАТИ НОМЕР</span>
+                        <span>ЗАБРОНЮВАТИ НОМЕР</span>
                         <span><svg width="25" height="24" viewBox="0 0 25 24" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path d="M6.5 6L19.5 19M19.5 19V6.52M19.5 19H7.02" stroke="white" stroke-width="1.5"
@@ -293,23 +282,115 @@
                             </svg>
                         </span>
                     </a>
-                    <div class="hero__pagination"></div>
-                </div>
-                <div class="hero__deco">
-                    <p>гортай вниз</p>
-                    <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M12.5 3L12.5 21M12.5 21L21 12.5M12.5 21L4 12.5" stroke="white" stroke-width="1.5"
-                            stroke-linecap="round" stroke-linejoin="round" />
-                    </svg>
+                    <div class="hero__info">
+                        <div class="hero__info-box">
+                            <img width="32" height="32" src="./assets/images/icons/ico-cube-white.svg" alt="Icon">
+                            <span>40 кв.м</span>
+                        </div>
+                        <div class="hero__info-box">
+                            <img width="32" height="32" src="./assets/images/icons/ico-door-white.svg" alt="Icon">
+                            <span>2 кімнати</span>
+                        </div>
+                        <div class="hero__info-box">
+                            <img width="32" height="32" src="./assets/images/icons/ico-people-white.svg" alt="Icon">
+                            <span>До 4 гостей</span>
+                        </div>
+                        <div class="hero__info-box">
+                            <img width="32" height="32" src="./assets/images/icons/ico-clock-white.svg" alt="Icon">
+                            <span>Час заїзду: 14:00</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
-        <section class="benefits">
+        <section class="info">
             <div class="container">
-                <h2 class="benefits__title">
-                    Для поціновувачів <br />
-                    затишку та комфорту!
-                </h2>
+                <div class="info__text">
+                    <h2 class="info__title">деталі номеру</h2>
+                    <p class="info__description">
+                        Просторий мансардний номер з вітальнею, спальнею та ванною кімнатою. У номері: двоспальне або
+                        два односпальних ліжка, розкладний диван, мінібар, кондиціонер, телевізор, Wi-Fi, халат,
+                        тапочки. У вартість входять ванні аксесуари та охоронювана парковка.
+                    </p>
+                    <div class="info__details">
+                        <p class="info__price">2500 грн/ніч</p>
+                        <p class="info__val">за 4 гостей</p>
+                    </div>
+                </div>
+                <ul class="info__benefits">
+                    <li class="info__benefits-item">
+                        <div class="info__benefits-ico">
+                            <img width="32" height="32" src="./assets/images/icons/benefit_1.svg" alt="Icon">
+                        </div>
+                        <span class="info__benefits-text">Двоспальне ліжко</span>
+                    </li>
+                    <li class="info__benefits-item">
+                        <div class="info__benefits-ico">
+                            <img width="32" height="32" src="./assets/images/icons/benefit_2.svg" alt="Icon">
+                        </div>
+                        <span class="info__benefits-text">Телевізор</span>
+                    </li>
+                    <li class="info__benefits-item">
+                        <div class="info__benefits-ico">
+                            <img width="32" height="32" src="./assets/images/icons/benefit_3.svg" alt="Icon">
+                        </div>
+                        <span class="info__benefits-text">Холодильник</span>
+                    </li>
+                    <li class="info__benefits-item">
+                        <div class="info__benefits-ico">
+                            <img width="32" height="32" src="./assets/images/icons/benefit_4.svg" alt="Icon">
+                        </div>
+                        <span class="info__benefits-text">Швидкісний WI-FI</span>
+                    </li>
+                    <li class="info__benefits-item">
+                        <div class="info__benefits-ico">
+                            <img width="32" height="32" src="./assets/images/icons/benefit_5.svg" alt="Icon">
+                        </div>
+                        <span class="info__benefits-text">Кондиціонер</span>
+                    </li>
+                    <li class="info__benefits-item">
+                        <div class="info__benefits-ico">
+                            <img width="32" height="32" src="./assets/images/icons/benefit_6.svg" alt="Icon">
+                        </div>
+                        <span class="info__benefits-text">Комплект меблів</span>
+                    </li>
+                    <li class="info__benefits-item">
+                        <div class="info__benefits-ico">
+                            <img width="32" height="32" src="./assets/images/icons/benefit_7.svg" alt="Icon">
+                        </div>
+                        <span class="info__benefits-text">Халат та капці</span>
+                    </li>
+                    <li class="info__benefits-item">
+                        <div class="info__benefits-ico">
+                            <img width="32" height="32" src="./assets/images/icons/benefit_8.svg" alt="Icon">
+                        </div>
+                        <span class="info__benefits-text">Фен</span>
+                    </li>
+                    <li class="info__benefits-item">
+                        <div class="info__benefits-ico">
+                            <img width="32" height="32" src="./assets/images/icons/benefit_9.svg" alt="Icon">
+                        </div>
+                        <span class="info__benefits-text">Душова кабіна</span>
+                    </li>
+                    <li class="info__benefits-item">
+                        <div class="info__benefits-ico">
+                            <img width="32" height="32" src="./assets/images/icons/benefit_10.svg" alt="Icon">
+                        </div>
+                        <span class="info__benefits-text">Міні-бар</span>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section class="previews">
+            <div class="container">
+                <div class="previews__head section-description">
+                    <h3 class="previews__title section-description__title">
+                        Галерея
+                    </h3>
+                    <p class="previews__description section-description__text">
+                        Оберіть один з наших вишуканих номерів
+                    </p>
+                </div>
             </div>
             <div class="benefits-gallery swiper">
                 <div class="benefits-gallery__nav">
@@ -347,29 +428,18 @@
                     </div>
                 </div>
             </div>
-            <div class="container">
-                <p class="benefits__description">
-                    Наш готель — це унікальна атмосфера затишку та
-                    гостинності, що залишається в пам'яті гостей завдяки
-                    професійному обслуговуванню та індивідуальному дизайну
-                    номерів. Ми знаходимося за 0,5 км від Львова, на
-                    магістралі Київ-Чоп, що забезпечує швидкий та зручний
-                    доступ для Вашого комфортного відпочинку
-                </p>
-            </div>
         </section>
-        <section class="services services--rest" style="background-image: url(./assets/images/bg-rest.jpg);">
+        <section class="services services--rest" style="background-image: url(./assets/images/bg-rest2.jpg);">
             <div class="container">
                 <div class="services__content">
                     <h2 class="services__title">
-                        Ресторан європейської та національної кухні
+                        відпочивайте разом з status hotel
                     </h2>
                     <p class="services__description">
-                        Все це створює неповторний смак гастрономічних шедеврів, які Ви зможете доповнити різноманітними
-                        напоями, представленими в меню.
+                        У нас ви знайдете все для незабутнього сімейного відпочинку
                     </p>
                     <a href="javascript: void(0)" class="services__link link--primary">
-                        <span>ДЕТАЛЬНІШЕ</span>
+                        <span>забронювати</span>
                         <span>
                             <svg width="33" height="32" viewBox="0 0 33 32" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
@@ -384,7 +454,9 @@
         <section class="comfort">
             <div class="container">
                 <div class="comfort__head section-description">
-                    <h3 class="comfort__title section-description__title">номери</h3>
+                    <h3 class="comfort__title section-description__title">
+                        Можливо вам сподобаються
+                    </h3>
                     <p class="comfort__description section-description__text">
                         Оберіть один з наших вишуканих номерів
                     </p>
@@ -517,220 +589,6 @@
                         </svg>
                     </span>
                 </a>
-            </div>
-        </section>
-        <section class="services services--spa" style="background-image: url(./assets/images/bg-spa.jpg);">
-            <div class="container">
-                <div class="services__content">
-                    <h2 class="services__title">
-                        spa & relax
-                    </h2>
-                    <p class="services__description">
-                        Втома й стрес від щоденної метушні? Завітай у наше SPA — фінська сауна та джакузі допоможуть
-                        розслабитись, очистити тіло й відновити сили.
-                    </p>
-                    <a href="javascript: void(0)" class="services__link link--primary">
-                        <span>ДЕТАЛЬНІШЕ</span>
-                        <span>
-                            <svg width="33" height="32" viewBox="0 0 33 32" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path d="M8.5 8L25.8333 25.3333M25.8333 25.3333V8.69333M25.8333 25.3333H9.19333"
-                                    stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                            </svg>
-                        </span>
-                    </a>
-                </div>
-            </div>
-        </section>
-        <section class="additional">
-            <div class="container">
-                <div class="additional__head section-description">
-                    <h3 class="additional__title section-description__title">Додаткові послуги</h3>
-                    <p class="additional__description section-description__text">
-                        Ми подбали про кожну деталь, аби ваше перебування у готелі було справді безтурботним.
-                    </p>
-                </div>
-                <div class="additional__cards">
-                    <a href="javascript: void(0)" class="additional__card">
-                        <div class="additional__card-thumb">
-                            <img width="652" height="412" loading="lazy" src="./assets/images/additional_1.jpg"
-                                alt="Thumbnail">
-                        </div>
-                        <div class="additional__card-descr">
-                            <h4>ДИТЯЧИЙ МАЙДАНЧИК</h4>
-                            <span>
-                                <svg width="32" height="32" viewBox="0 0 32 32" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M8 8L25.3333 25.3333M25.3333 25.3333V8.69333M25.3333 25.3333H8.69333"
-                                        stroke="white" stroke-width="1.5" stroke-linecap="round"
-                                        stroke-linejoin="round" />
-                                </svg>
-                            </span>
-                        </div>
-                    </a>
-                    <a href="javascript: void(0)" class="additional__card">
-                        <div class="additional__card-thumb">
-                            <img width="652" height="412" loading="lazy" src="./assets/images/additional_2.jpg"
-                                alt="Thumbnail">
-                        </div>
-                        <div class="additional__card-descr">
-                            <h4>ДИТЯЧИЙ МАЙДАНЧИК</h4>
-                            <span>
-                                <svg width="32" height="32" viewBox="0 0 32 32" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M8 8L25.3333 25.3333M25.3333 25.3333V8.69333M25.3333 25.3333H8.69333"
-                                        stroke="white" stroke-width="1.5" stroke-linecap="round"
-                                        stroke-linejoin="round" />
-                                </svg>
-                            </span>
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </section>
-        <section class="specials">
-            <div class="container">
-                <div class="specials__head section-description">
-                    <h3 class="specials__title section-description__title">спеціальні пропозиції</h3>
-                    <p class="specials__description section-description__text">
-                        Ми приготували для гостей нашого готелю спеціальні приємні знижки та цікаві пропозиції.
-                    </p>
-                </div>
-            </div>
-            <div class="specials-gallery swiper">
-                <div class="specials-gallery__wrapper swiper-wrapper">
-                    <div class="specials-gallery__slide swiper-slide">
-                        <a href="javascript: void(0)" class="specials-gallery__item">
-                            <div class="thumbnail">
-                                <img loading="lazy" src="./assets/images/special_1.jpg" alt="Slide 1">
-                            </div>
-                            <div class="description">
-                                <div class="description__col">
-                                    <h4>Знижка 10% для іменинників</h4>
-                                    <p>
-                                        У твій особливий день даруємо 10% знижки — святкуй день народження з
-                                        комфортом
-                                        та приємними бонусами!
-                                    </p>
-                                </div>
-                                <div class="description__col">
-                                    <svg width="33" height="33" viewBox="0 0 33 33" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M8.5 8.5L25.8333 25.8333M25.8333 25.8333V9.19333M25.8333 25.8333H9.19333"
-                                            stroke="#522008" stroke-width="1.5" stroke-linecap="round"
-                                            stroke-linejoin="round" />
-                                    </svg>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-
-                    <div class="specials-gallery__slide swiper-slide">
-                        <a href="javascript: void(0)" class="specials-gallery__item">
-                            <div class="thumbnail">
-                                <img loading="lazy" src="./assets/images/special_2.jpg" alt="Slide 1">
-                            </div>
-                            <div class="description">
-                                <div class="description__col">
-                                    <h4>безкоштовне проживання для молодят</h4>
-                                    <p>
-                                        Даруємо незабутню ніч: безкоштовне проживання для молодят, які святкують
-                                        весілля у нас.
-                                    </p>
-                                </div>
-                                <div class="description__col">
-                                    <svg width="33" height="33" viewBox="0 0 33 33" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M8.5 8.5L25.8333 25.8333M25.8333 25.8333V9.19333M25.8333 25.8333H9.19333"
-                                            stroke="#522008" stroke-width="1.5" stroke-linecap="round"
-                                            stroke-linejoin="round" />
-                                    </svg>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="specials-gallery__slide swiper-slide">
-                        <a href="javascript: void(0)" class="specials-gallery__item">
-                            <div class="thumbnail">
-                                <img loading="lazy" src="./assets/images/special_2.jpg" alt="Slide 1">
-                            </div>
-                            <div class="description">
-                                <div class="description__col">
-                                    <h4>безкоштовне проживання для молодят</h4>
-                                    <p>
-                                        Даруємо незабутню ніч: безкоштовне проживання для молодят, які святкують
-                                        весілля у нас.
-                                    </p>
-                                </div>
-                                <div class="description__col">
-                                    <svg width="33" height="33" viewBox="0 0 33 33" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M8.5 8.5L25.8333 25.8333M25.8333 25.8333V9.19333M25.8333 25.8333H9.19333"
-                                            stroke="#522008" stroke-width="1.5" stroke-linecap="round"
-                                            stroke-linejoin="round" />
-                                    </svg>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="specials-gallery__slide swiper-slide">
-                        <a href="javascript: void(0)" class="specials-gallery__item">
-                            <div class="thumbnail">
-                                <img loading="lazy" src="./assets/images/special_3.jpg" alt="Slide 1">
-                            </div>
-                            <div class="description">
-                                <div class="description__col">
-                                    <h4>Іменна картка знижка -10%</h4>
-                                    <p>
-                                        Готель STATUS надає постійним гостям знижку -10% на проживання в
-                                        апартаментах чи сфері.
-                                    </p>
-                                </div>
-                                <div class="description__col">
-                                    <svg width="33" height="33" viewBox="0 0 33 33" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M8.5 8.5L25.8333 25.8333M25.8333 25.8333V9.19333M25.8333 25.8333H9.19333"
-                                            stroke="#522008" stroke-width="1.5" stroke-linecap="round"
-                                            stroke-linejoin="round" />
-                                    </svg>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="specials-gallery__slide swiper-slide">
-                        <a href="javascript: void(0)" class="specials-gallery__item">
-                            <div class="thumbnail">
-                                <img loading="lazy" src="./assets/images/special_1.jpg" alt="Slide 1">
-                            </div>
-                            <div class="description">
-                                <div class="description__col">
-                                    <h4>Знижка 10% для іменинників</h4>
-                                    <p>
-                                        У твій особливий день даруємо 10% знижки — святкуй день народження з
-                                        комфортом
-                                        та приємними бонусами!
-                                    </p>
-                                </div>
-                                <div class="description__col">
-                                    <svg width="33" height="33" viewBox="0 0 33 33" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M8.5 8.5L25.8333 25.8333M25.8333 25.8333V9.19333M25.8333 25.8333H9.19333"
-                                            stroke="#522008" stroke-width="1.5" stroke-linecap="round"
-                                            stroke-linejoin="round" />
-                                    </svg>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="specials-pagination"></div>
             </div>
         </section>
     </main>

@@ -1,0 +1,171 @@
+@use '../../base/media' as *;
+@use '../../base/mixins' as *;
+.main--apartments-item {
+    .hero {
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        position: relative;
+        min-height: 100vh;
+        display: grid;
+        overflow: hidden;
+
+        @include media('mobile') {
+            min-height: 80svh;
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            background: #0000008a;
+        }
+
+        .container {
+            z-index: 2;
+            position: relative;
+            height: 100%;
+            width: 100%;
+        }
+
+        &__content {
+            height: 100%;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        &__title {
+            font: 400 112px / 100% var(--ff-base);
+            letter-spacing: 5px;
+            text-transform: uppercase;
+            margin-bottom: 44px;
+            color: var(--white-color);
+
+            @include media('tablet') {
+                font-size: 64px;
+                line-height: 120%;
+            }
+            @include media('mobile') {
+                font-size: 32px;
+                margin-bottom: 22px;
+            }
+        }
+
+        &__back {
+            font: 400 16px / 100% var(--ff-secondary);
+            text-transform: uppercase;
+            display: flex;
+            align-items: center;
+            margin: 0 auto 44px;
+            gap: 12px;
+            color: var(--white-color);
+
+            @include media('mobile') {
+                margin: 0 auto 20px;
+                font-size: 14px;
+                line-height: 130%;
+                gap: 8px;
+            }
+
+            @include hover {
+                svg {
+                    transform: translateX(-3px);
+                }
+            }
+
+            svg {
+                @include transitions(0.3s);
+                margin-top: -5px;
+                display: inline-flex;
+                width: 24px;
+                height: 24px;
+                flex-shrink: 0;
+            }
+        }
+
+        &__info {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 44px;
+            max-width: 950px;
+            width: 100%;
+            margin: 0 auto;
+
+            @include media('tablet') {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
+            }
+
+            // @include media('mobile') {
+            //     grid-template-columns: repeat(1, 1fr);
+            //     max-width: 576px;
+            // }
+
+            &-box {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 8px;
+                padding-bottom: 15px;
+                border-bottom: 1px solid var(--white-color);
+
+                @include media('mobile') {
+                    gap: 4px;
+                    padding-bottom: 8px;
+                }
+
+                img {
+                    display: inline-flex;
+                    flex-shrink: 0;
+                    width: 32px;
+                    height: 32px;
+
+                    @include media('mobile') {
+                        width: 24px;
+                        height: 24px;
+                    }
+                }
+
+                span {
+                    font: 400 20px / 100% var(--ff-secondary);
+                    color: var(--white-color);
+                    @include media('tablet') {
+                        font-size: 18px;
+                    }
+                    @include media('mobile') {
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+
+        .link--accent {
+            max-width: 282px;
+            margin: 0 auto 44px;
+            border: none;
+            padding: 18px 31px;
+            background: var(--primary-color);
+
+            @include media('mobile') {
+                max-width: 100%;
+            }
+            span {
+                z-index: 2;
+            }
+            &::before {
+                z-index: 0;
+                background: #fff;
+            }
+
+            @include hover {
+                color: var(--primary-color);
+            }
+        }
+    }
+}

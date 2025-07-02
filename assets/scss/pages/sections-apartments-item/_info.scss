@@ -1,0 +1,149 @@
+@use '../../base/media' as *;
+@use '../../base/mixins' as *;
+.main--apartments-item {
+    .info {
+        padding-block: var(--content-padding-sm);
+
+        &__text {
+            margin-bottom: 56px;
+            @include media('mobile') {
+                margin-bottom: 28px;
+            }
+        }
+
+        &__title {
+            font: 400 56px / 100% var(--ff-base);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 32px;
+            text-align: center;
+            color: var(--primary-color);
+
+            @include media('tablet') {
+                font-size: 40px;
+                line-height: 48px;
+            }
+
+            @include media('mobile') {
+                font-size: 28px;
+                line-height: 130%;
+                margin-bottom: 18px;
+            }
+        }
+
+        &__description {
+            font: 300 24px / 100% var(--ff-secondary);
+            max-width: 830px;
+            text-align: center;
+            margin: 0 auto 24px;
+
+            @include media('tablet') {
+                font-size: 20px;
+                line-height: 120%;
+            }
+            @include media('mobile') {
+                font-size: 16px;
+                line-height: 130%;
+                max-width: 100%;
+            }
+        }
+
+        &__details {
+            padding: 10px;
+            text-align: center;
+            font: 400 44px / 56px var(--ff-base);
+
+            @include media('mobile') {
+                font-size: 26px;
+                line-height: 130%;
+            }
+        }
+
+        &__price {
+            color: var(--primary-color);
+        }
+
+        &__val {
+            font-size: 40px;
+            color: #5220087d;
+            @include media('mobile') {
+                font-size: 22px;
+                line-height: 130%;
+            }
+        }
+
+        &__benefits {
+            max-width: 1092px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 44px 8px;
+
+            @include media('mobile') {
+                display: flex;
+                align-items: flex-start;
+                gap: 20px;
+                overflow: scroll;
+                scrollbar-width: none;
+                -ms-overflow-style: none;
+
+                &::-webkit-scrollbar {
+                    display: none;
+                }
+            }
+
+            &-item {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                gap: 16px;
+                hyphens: auto;
+                overflow-wrap: break-word;
+                word-break: break-word;
+
+                @include media('mobile') {
+                    flex: 1;
+                    min-width: 150px;
+                }
+
+                img {
+                    display: inline-flex;
+                    flex-shrink: 0;
+                    width: 32px;
+                    height: 32px;
+                }
+            }
+
+            &-ico {
+                width: 52px;
+                height: 52px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 50%;
+                border: 1px solid var(--primary-color);
+            }
+
+            &-text {
+                font: 300 16px / 100% var(--ff-secondary);
+            }
+        }
+    }
+
+    .comfort {
+        &__link {
+            max-width: 282px;
+            margin: 0 auto;
+            color: var(--primary-color);
+
+            @include hover {
+                background: var(--primary-color);
+            }
+
+            &::before {
+                background: #fff;
+            }
+        }
+    }
+}

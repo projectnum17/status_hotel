@@ -10,6 +10,11 @@
                 transform: scale(1.1);
             }
         }
+
+        .comfort-card__cta {
+            background: var(--primary-color);
+            border-color: var(--primary-color);
+        }
     }
 
     &__thumb {
@@ -62,6 +67,8 @@
         border-radius: 50%;
         border: 1px solid var(--white-color);
         color: var(--white-color);
+
+        @include transitions(.5s);
 
         @include media('tablet') {
             min-width: 120px;

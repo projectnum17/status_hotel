@@ -1,0 +1,117 @@
+@use '../base/media' as *;
+@use '../base/_mixins' as *;
+.benefits-gallery {
+    position: relative;
+    margin-bottom: 44px;
+    padding-inline: 20px;
+    @include media('mobile') {
+        padding-inline: 0;
+    }
+
+    @include media('tablet') {
+        margin-bottom: 22px;
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 20px;
+    }
+
+    &__btn {
+        z-index: 5;
+        @include transitions(0.3s);
+        width: 44px;
+        height: 44px;
+        display: inline-flex;
+        flex-shrink: 0;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-100%);
+        border: 1px solid var(--primary-color);
+        color: var(--primary-color);
+
+        @include media('tablet') {
+            position: relative;
+            top: auto;
+            transform: translateY(0);
+        }
+
+        @include hover {
+            background: var(--primary-color);
+            color: var(--white-color);
+        }
+
+        &.swiper-button-disabled {
+            opacity: 0.6;
+            pointer-events: none;
+        }
+
+        &.btn--next {
+            right: 30%;
+            @media (min-width: 2400px) {
+                right: 31%;
+            }
+            @include media('tablet') {
+                right: auto;
+            }
+        }
+        &.btn--prev {
+            left: 30%;
+            @media (min-width: 2400px) {
+                left: 31%;
+            }
+            @include media('tablet') {
+                left: auto;
+            }
+        }
+    }
+
+    &__slide {
+        @include transitions(0.2s);
+        height: 580px;
+        transform: scale(0.9) !important;
+        position: relative;
+
+        img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #0000003d;
+        }
+        @include media('tablet') {
+            transform: scale(1) !important;
+        }
+        @include media('mobile') {
+            height: 320px;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        &.swiper-slide-active {
+            transform: scale(1) !important;
+        }
+    }
+
+    &__nav {
+        @include media('tablet') {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            gap: 12px;
+            padding-right: 20px;
+        }
+    }
+}
