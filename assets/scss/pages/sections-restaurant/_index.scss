@@ -2,6 +2,16 @@
 @forward 'meal';
 @forward 'area';
 .main--restaurant {
+    .hero {
+        background-image: url(../images/bg-restaurant.jpg);
+    }
+
+    .services {
+        &--rest {
+            background-image: url(../images/bg-rest3.jpg);
+        }
+    }
+
     section:nth-child(3) {
         position: relative;
 

@@ -2,9 +2,7 @@
 @use '../../base/mixins' as *;
 .main--apartments-item {
     .hero {
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
+        background: url('../images/ap-item.jpg') no-repeat center center / cover;
         position: relative;
         min-height: 100vh;
         display: grid;
@@ -33,6 +31,7 @@
         }
 
         &__content {
+            padding-block: 80px 20px;
             height: 100%;
             text-align: center;
             display: flex;
@@ -106,11 +105,6 @@
                 grid-template-columns: repeat(2, 1fr);
                 gap: 20px;
             }
-
-            // @include media('mobile') {
-            //     grid-template-columns: repeat(1, 1fr);
-            //     max-width: 576px;
-            // }
 
             &-box {
                 display: flex;

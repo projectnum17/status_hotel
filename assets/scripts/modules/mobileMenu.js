@@ -1,32 +1,24 @@
 const mobileMenu = () => {
-    const openMenuBtn = document.querySelector('.js-burger');
-    const closeMenuBtn = document.querySelector('.js-menu-close');
+    const toggleVisibleMenu = document.querySelector('.js-burger');
     const menu = document.querySelector('.mobile-menu');
-
-    const langToggle = document.querySelector('.js-lang-parent');
-    const langBox = document.querySelector('.js-lang-box');
-
+    const header = document.querySelector('.header');
     const submenuItems = document.querySelectorAll('.js-menu-submenu');
 
-    if (langToggle && langBox) {
-        langToggle.addEventListener('click', (e) => {
-            e.stopPropagation();
-            langBox.classList.toggle('show');
-        });
-    }
+    if (toggleVisibleMenu && menu) {
+        toggleVisibleMenu.addEventListener('click', () => {
+            let isOpen = menu.classList.contains('shown');
 
-    if (openMenuBtn && menu) {
-        openMenuBtn.addEventListener('click', () => {
-            menu.classList.add('shown');
-            document.body.style.overflow = 'hidden';
-        });
-    }
-
-    if (closeMenuBtn && menu) {
-        closeMenuBtn.addEventListener('click', () => {
-            menu.classList.remove('shown');
-            document.body.style.overflow = '';
-            if (langBox) langBox.classList.remove('show');
+            if (isOpen) {
+                header.classList.remove('visible');
+                menu.classList.remove('shown');
+                toggleVisibleMenu.classList.remove('transformed');
+                document.body.style.overflow = '';
+            } else {
+                header.classList.add('visible');
+                menu.classList.add('shown');
+                toggleVisibleMenu.classList.add('transformed');
+                document.body.style.overflow = 'hidden';
+            }
         });
     }
 

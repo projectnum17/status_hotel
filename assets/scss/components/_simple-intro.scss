@@ -33,11 +33,15 @@
     }
 
     &__content {
+        padding-block: 120px 20px;
         height: 100%;
         text-align: center;
         display: flex;
         flex-direction: column;
         justify-content: center;
+        @include media('mobile') {
+            padding-block: 80px 20px;
+        }
     }
 
     &__title {

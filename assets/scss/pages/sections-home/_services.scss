@@ -1,3 +1,12 @@
 @use '../../base/media' as *;
-.main--hero {
+.main--home {
+    .services {
+        &--rest {
+            background-image: url('../images/bg-rest.jpg');
+        }
+
+        &--spa {
+            background-image: url('../images/bg-spa.jpg');
+        }
+    }
 }

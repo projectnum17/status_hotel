@@ -3,6 +3,12 @@
 @forward 'relax';
 
 .main--spa {
+    .services {
+        &--rest {
+            background-image: url(../images/bg-hero.jpg);
+        }
+    }
+
     section:nth-child(3) {
         position: relative;
 

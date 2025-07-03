@@ -1,6 +1,16 @@
 @forward 'info';
 @forward 'rooms';
 .main--conf {
+    .hero {
+        background-image: url(../images/bg-conf.jpg);
+    }
+
+    .services {
+        &--rest {
+            background-image: url(../images/bg-rest4.jpg);
+        }
+    }
+
     section:nth-child(3) {
         position: relative;
 

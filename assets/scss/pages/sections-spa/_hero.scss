@@ -2,6 +2,7 @@
 @use '../../base/mixins' as *;
 .main--spa {
     .hero {
+        background-image: url('../images/spa-intro.jpg');
         &__info {
             display: flex;
             align-items: center;

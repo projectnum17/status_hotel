@@ -8,23 +8,29 @@
     width: 100%;
     height: 100%;
     z-index: 10;
-    transform: translateX(100%);
+    opacity: 0;
+    visibility: hidden;
     background: var(--primary-bg);
     @include transitions(0.3s);
 
     &.shown {
-        transform: translateX(0);
+        opacity: 1;
+        visibility: visible;
     }
 
     .container {
         height: 100%;
-        padding-bottom: 20px;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
 
         @media (max-width: 1199px) {
+            padding-block: 170px 20px;
             padding-inline: 20px;
+        }
+
+        @media (max-width: 767px) {
+            padding-block: 120px 20px;
         }
     }
 
@@ -36,82 +42,27 @@
         }
     }
 
-    &__lang {
+    &__row {
         display: flex;
+        flex-direction: column;
         align-items: center;
-        gap: 5px;
-
-        li {
-            a {
-                font: 400 16px / 100% var(--ff-secondary);
-                color: var(--black-color);
-                text-transform: uppercase;
-            }
-        }
-        .lang-list {
-            position: relative;
-            &__points {
-                display: flex;
-                flex-direction: column;
-                gap: 5px;
-                align-items: center;
-                text-align: center;
-                z-index: 6;
-                width: 50px;
-                border-radius: 6px;
-                padding: 2px;
-                position: absolute;
-                bottom: 0;
-                opacity: 0;
-                visibility: hidden;
-                transform: translateY(100%);
-                background: var(--primary-bg);
-                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-                @include transitions(0.3s);
-
-                &.show {
-                    opacity: 1;
-                    visibility: visible;
-                }
-            }
-        }
-    }
-
-    &__head {
-        padding-top: 8px;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 10px;
-        margin-bottom: 60px;
-    }
-
-    &__logo {
-        max-width: 50px;
-        img {
-            width: 100%;
-        }
-    }
-
-    &__close {
-        width: 30px;
-        height: 30px;
-        color: var(--black-color);
     }
 
     &__list {
         display: flex;
         flex-direction: column;
+        align-items: center;
         gap: 20px;
     }
 
     &__link {
-        font: 400 16px / 100% var(--ff-secondary);
+        font: 400 24px / 100% var(--ff-secondary);
         color: var(--black-color);
     }
 
     &__nav {
         margin-bottom: 40px;
+        width: 100%;
     }
 
     &__item {
@@ -119,6 +70,7 @@
             .mobile-menu__link {
                 display: flex;
                 align-items: center;
+                justify-content: center;
                 gap: 5px;
                 margin-bottom: 12px;
                 &::after {
@@ -157,6 +109,7 @@
         gap: 15px;
         display: flex;
         flex-direction: column;
+        align-items: center;
         overflow: hidden;
 
         li {
@@ -164,7 +117,7 @@
         }
 
         a {
-            font: 400 14px / 100% var(--ff-secondary);
+            font: 400 16px / 100% var(--ff-secondary);
             color: var(--black-color);
         }
     }
@@ -174,15 +127,19 @@
         flex-direction: column;
         gap: 12px;
         .contact-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
             p {
-                font: 300 14px / 100% var(--ff-secondary);
+                font: 300 12px / 100% var(--ff-secondary);
                 margin-bottom: 8px;
                 color: var(--black-color);
             }
 
             a {
-                font: 400 16px / 100% var(--ff-secondary);
+                font: 400 23px / 100% var(--ff-secondary);
                 margin-bottom: 8px;
+                letter-spacing: 0.8px;
                 color: var(--black-color);
             }
         }
@@ -190,16 +147,22 @@
         .contact-links {
             display: flex;
             align-items: center;
+            justify-content: center;
             gap: 16px;
 
             a {
-                width: 44px;
-                height: 44px;
+                width: 64px;
+                height: 64px;
                 display: inline-flex;
                 align-items: center;
                 justify-content: center;
                 border-radius: 50%;
                 border: 1px solid var(--primary-color);
+
+                img {
+                    width: 35px;
+                    height: 35px;
+                }
             }
         }
     }

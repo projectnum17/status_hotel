@@ -1,4 +1,17 @@
 const headerFlow = () => {
+    const langBox = document.querySelector('.header__lang');
+    if (langBox) {
+        langBox.addEventListener('click', (e) => {
+            e.stopPropagation();
+            langBox.classList.toggle('show-box');
+        });
+
+        document.addEventListener('click', (e) => {
+            if (!langBox.contains(e.target)) {
+                langBox.classList.remove('show-box');
+            }
+        });
+    }
     const header = document.querySelector('.header');
     window.addEventListener('scroll', () => {
         if (header) {

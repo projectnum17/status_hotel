@@ -74,6 +74,7 @@
                 }
 
                 .link--primary {
+                    pointer-events: none;
                     color: var(--primary-color);
                     span:last-child {
                         transform: rotate(-90deg);
