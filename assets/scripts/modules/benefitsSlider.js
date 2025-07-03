@@ -28,10 +28,6 @@ const benefitsSlider = () => {
         centeredSlides: true,
         centeredSlidesBounds: true,
         spaceBetween: 100,
-        autoplay: {
-            delay: 3000,
-            disableOnInteraction: true,
-        },
         speed: 1000,
         navigation: {
             prevEl: '.benefits-gallery .btn--prev',

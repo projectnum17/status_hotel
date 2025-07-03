@@ -2,6 +2,7 @@
 @use '../../base/mixins' as *;
 .main--conf {
     .rooms {
+        overflow: hidden;
         padding-block: var(--content-padding-sm);
 
         &__description {

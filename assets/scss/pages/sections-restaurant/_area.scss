@@ -3,6 +3,7 @@
 
 .main--restaurant {
     .area {
+        overflow: hidden;
         padding-block: var(--content-padding-sm);
         &__title {
             max-width: 600px;

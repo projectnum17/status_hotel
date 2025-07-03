@@ -2,6 +2,7 @@
 @use '../../base/mixins' as *;
 .main--spa {
     .relax {
+        overflow: hidden;
         padding-block: var(--content-padding-sm);
 
         &__description {

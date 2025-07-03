@@ -29,10 +29,10 @@ const specialsSlider = () => {
         // centeredSlidesBounds: true,
         loop: shouldCenterSlides,
         spaceBetween: 24,
-        autoplay: {
-            delay: 3000,
-            disableOnInteraction: true,
-        },
+        // autoplay: {
+        //     delay: 3000,
+        //     disableOnInteraction: true,
+        // },
         speed: 1000,
         pagination: {
             el: '.specials-pagination',

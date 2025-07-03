@@ -1,5 +1,6 @@
 'use strict';
 
+import animationScroll from './modules/animationScroll.js';
 import mobileMenu from './modules/mobileMenu.js';
 import headerFlow from './modules/header.js';
 import heroSlider from './modules/heroSlider.js';
@@ -8,6 +9,7 @@ import comfortCards from './modules/comfortCards.js';
 import specialsSlider from './modules/specialsSlider.js';
 
 document.addEventListener('DOMContentLoaded', () => {
+    animationScroll()
     let isMobileMenuInit = false;
     const handleMobileMenu = () => {
         if (window.innerWidth <= 1065 && !isMobileMenuInit) {

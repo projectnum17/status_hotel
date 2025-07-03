@@ -3,6 +3,7 @@
 
 .main--apartments {
     .apartments {
+        overflow: hidden;
         padding-block: var(--content-padding-sm);
 
         &__cards {
